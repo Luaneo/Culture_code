@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Unbounded", sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+:root {
+    --dark_blue: #081375;
+    --blue: #192BC2;
+    --light_blue: #DEE1FF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    min-width: 1280px;
+    height: 80px;
+    background-color: var(--blue);
+    border-bottom: 3px solid var(--dark_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 63px;
+}
+
+.header * {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    line-height: 25px;
+    color: var(--light_blue);
+}
+
+.header .text-logo {
+    width: 225px;
+    height: 50px;
+    text-align: justify;
+    cursor: pointer;
+    text-shadow:
+        2px 2px 0px var(--dark_blue),
+        2px -2px 0px var(--dark_blue),
+        -2px 2px 0px var(--dark_blue),
+        -2px -2px 0px var(--dark_blue);
+    transition: all 0.3s ease 0s;
+}
+
+.header .text-logo:hover {
+    transform: translateY(-3px);
+}
+
+.header .text-logo:hover a {
+    color: var(--dark_blue);
+    text-shadow:
+        1px 1px 0px var(--light_blue),
+        1px -1px 0px var(--light_blue),
+        -1px 1px 0px var(--light_blue),
+        -1px -1px 0px var(--light_blue);
+}
+
+.header ul {
+    width: 650px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul li {
+    transition: all 0.3s ease 0s;
+}
+
+.header ul li:hover {
+    transform: translateY(-3px);
+}
+
+.header ul li:hover a {
+    color: var(--dark_blue);
+    text-shadow:
+        1px 1px 0px var(--light_blue),
+        1px -1px 0px var(--light_blue),
+        -1px 1px 0px var(--light_blue),
+        -1px -1px 0px var(--light_blue);
+}
+
+.header a.map button {
+    background-color: white;
+    width: 154px;
+    height: 48px;
+    border: 3px solid var(--dark_blue);
+    border-radius: 24px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header a.map button:hover {
+    transform: translateY(-3px);
+    background-color: var(--light_blue);
+}
+
+main {
+    flex: 1;
+    width: 1154px;
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0px;
+}
+
+main > header {
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: var(--blue);
+}

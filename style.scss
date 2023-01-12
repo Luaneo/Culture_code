@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$accent-color: rgb(201, 54, 70);
+
+body {
+    font-family: Unbounded, sans-serif;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-section {
+    background-image: url(images/introduction.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#about {
+    h3 {
+        text-transform: uppercase;
+        color: white;
+        background-color: $accent-color;
+        text-align: center;
+    }
+}
+
+// @media (orientation: landscape) {
+//     header img {
+        
+//     }
+// }

@@ -1,0 +1,67 @@
+main fieldset {
+    width: 100%;
+    height: fit-content;
+    border: 3px solid black;
+    border-radius: 28px;
+    padding: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+main fieldset legend {
+    margin-left: 56px;
+    padding: 4px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+main fieldset div {
+    gap: 27px;
+    display: flex;
+}
+
+main fieldset div:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+main fieldset div .mural-img {
+    width: 280px;
+    height: minamax(373px, 100%);
+    border: 3px solid black;
+    border-radius: 25px;
+    background-size: cover;
+}
+
+main fieldset div article {
+    width: 790px;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+main fieldset div article header {
+    margin-bottom: 10px;
+}
+
+main fieldset div article p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#kolh4 {
+    background-image: url(images/kolh4.png);
+}
+
+#kolh8 {
+    background-image: url(images/kolh8.png);
+}
+
+#lug12 {
+    background-image: url(images/lug12.jpg);
+}
+
+#lug16 {
+    background-image: url(images/lug16.jpg);
+}
