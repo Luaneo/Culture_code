@@ -1,0 +1,20 @@
+@media (orientation: portrait) {
+    .arrow-section {
+        background-size: clamp(500px, 100%, 1894px);
+        a {
+            display: none;
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    #about {
+        article {
+            img {
+                display: none;
+            }
+        }
+    }
+}

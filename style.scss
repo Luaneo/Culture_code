@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(typography.css);
+@import url(responsive.css);
 
 $accent-color: rgb(201, 54, 70);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Unbounded, sans-serif;
@@ -8,28 +19,75 @@ body {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 2rem;
+    display: grid;
+    place-items: center;
+
+    img {
+        width: clamp(15rem, 20vw, 325px);
+    }
 }
 
 .arrow-section {
+    display: grid;
+    place-items: center;
     background-image: url(images/introduction.png);
+    // background-size: clamp(500px, 100%, 1894px), clamp(100px, 100%, 663px);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-position: center;
+    height: 35vw;
+
+    a {
+        position: relative;
+        bottom: 2vw;
+
+        img {
+            width: 4vw;
+        }
+    }
 }
 
 #about {
-    h3 {
-        text-transform: uppercase;
-        color: white;
+    .about {
+        display: grid;
+        place-items: center;
+        height: 4rem;
         background-color: $accent-color;
-        text-align: center;
+        color: white;
+    }
+
+    article {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        display: flex;
+
+        main {
+            margin-left: clamp(10vw, 15vw, 25vw);
+            margin-right: 8vw;
+
+            .zheldor {
+                display: flex;
+                width: fit-content;
+                padding: .5rem;
+                border-radius: 2rem;
+                border: 2px solid black;
+
+                &::before {
+                    content: url(images/pinhead.png);
+                    display: block;
+                    width: 1rem;
+                }
+            }
+        }
+
+        img {
+            width: 25vw;
+        }
     }
 }
 
 // @media (orientation: landscape) {
 //     header img {
-        
+
 //     }
 // }
