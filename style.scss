@@ -7,15 +7,9 @@ $accent-color: rgb(201, 54, 70);
 * {
     margin: 0px;
     padding: 0px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
     font-family: Unbounded, sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -25,6 +19,16 @@ header {
 
     img {
         width: clamp(15rem, 20vw, 325px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1vw);
     }
 }
 
@@ -38,8 +42,11 @@ header {
     height: 35vw;
 
     a {
+        display: block;
         position: relative;
         bottom: 2vw;
+        animation: slide-top 1s ease-in-out infinite alternate;
+
 
         img {
             width: 4vw;
@@ -51,7 +58,7 @@ header {
     .about {
         display: grid;
         place-items: center;
-        height: 4rem;
+        height: 5em;
         background-color: $accent-color;
         color: white;
     }
@@ -68,26 +75,45 @@ header {
             .zheldor {
                 display: flex;
                 width: fit-content;
-                padding: .5rem;
+                margin-bottom: 1.5em;
+                padding: .7em;
                 border-radius: 2rem;
                 border: 2px solid black;
 
-                &::before {
-                    content: url(images/pinhead.png);
-                    display: block;
-                    width: 1rem;
+                img {
+                    display: inline;
+                    height: 1.3em;
+                    margin-right: .5em;
                 }
+            }
+
+            h1 {
+                width: 7em;
+                margin-bottom: 2.5rem;
+            }
+
+            p {
+                width: 30vw;
+                line-height: 1.5em;
+                text-align: justify;
+                margin-bottom: 1em
+            }
+
+            button {
+                margin-top: 1em;
+                padding: 1em;
+                border: none;
+                border-radius: 2em;
+                background-color: $accent-color;
+                color: white;
+                font-size: clamp(.8rem, 1vw, 1vw);
             }
         }
 
-        img {
-            width: 25vw;
+        img.mural-aside {
+            width: 34vw;
+            height: 53vw;
+            ;
         }
     }
 }
-
-// @media (orientation: landscape) {
-//     header img {
-
-//     }
-// }

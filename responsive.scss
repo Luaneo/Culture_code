@@ -1,6 +1,7 @@
 @media (orientation: portrait) {
     .arrow-section {
         background-size: clamp(500px, 100%, 1894px);
+
         a {
             display: none;
 
@@ -12,6 +13,14 @@
 
     #about {
         article {
+            main {
+                margin: 0 10vw !important;
+
+                p {
+                    width: auto !important;
+                }
+            }
+
             img {
                 display: none;
             }
