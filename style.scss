@@ -107,6 +107,7 @@ header {
                 background-color: $accent-color;
                 color: white;
                 font-size: clamp(.8rem, 1vw, 1vw);
+                cursor: pointer;
             }
         }
 
@@ -115,5 +116,32 @@ header {
             height: 53vw;
             ;
         }
+    }
+}
+
+#map {
+    display: grid;
+    place-items: center;
+
+    .map {
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        height: 5em;
+        background-color: $accent-color;
+        color: white;
+        margin-bottom: 10vh;
+    }
+
+    .bg {
+        width: 80vw;
+        z-index: -1;
+    }
+
+    .modal {
+        padding: 10vw;
+        display: grid;
+        place-items: center;
+        position: fixed;
     }
 }
