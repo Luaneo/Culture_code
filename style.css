@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url(typography.css);
+@import url(responsive.css);
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Unbounded, sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+header {
+  margin: 2rem;
+  display: grid;
+  place-items: center;
+}
+header img {
+  width: clamp(15rem, 20vw, 325px);
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}
+.arrow-section {
+  display: grid;
+  place-items: center;
+  background-image: url(images/introduction.png);
+  background-size: contain;
+  background-position: center;
+  height: 35vw;
+}
+.arrow-section a {
+  display: block;
+  position: relative;
+  bottom: 2vw;
+  -webkit-animation: slide-top 1s ease-in-out infinite alternate;
+          animation: slide-top 1s ease-in-out infinite alternate;
+}
+.arrow-section a img {
+  width: 4vw;
+}
+
+#about .about {
+  display: grid;
+  place-items: center;
+  height: 5em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+}
+#about article {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+}
+#about article main {
+  margin-left: 15vw;
+  margin-right: 8vw;
+}
+#about article main .zheldor {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1.5em;
+  padding: 0.7em;
+  border-radius: 2rem;
+  border: 2px solid black;
+}
+#about article main .zheldor img {
+  display: inline;
+  height: 1.3em;
+  margin-right: 0.5em;
+}
+#about article main h1 {
+  width: 7em;
+  margin-bottom: 2.5rem;
+}
+#about article main p {
+  width: 30vw;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+#about article main button {
+  margin-top: 1em;
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+  font-size: clamp(0.8rem, 1vw, 1vw);
+  cursor: pointer;
+}
+#about article img.mural-aside {
+  width: 34vw;
+  height: 53vw;
+}
+
+#map {
+  display: grid;
+  place-items: center;
+}
+#map .map {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  height: 5em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+  margin-bottom: 10vh;
+}
+#map .bg {
+  width: 80vw;
+  z-index: -1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+
+.modal.active {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */

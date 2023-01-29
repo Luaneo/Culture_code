@@ -137,11 +137,21 @@ header {
         width: 80vw;
         z-index: -1;
     }
+}
 
-    .modal {
-        padding: 10vw;
-        display: grid;
-        place-items: center;
-        position: fixed;
-    }
+.modal {
+    position: fixed;
+    top: 0; bottom: 0; right: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(255, 255, 255, .7);
+    transition: all .3s ease-in-out;
+    transform: scale(0);
+}
+
+.modal.active {
+    transition: all .3s ease-in-out;
+    transform: scale(1);
 }
