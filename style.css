@@ -9,12 +9,12 @@
   scroll-behavior: smooth;
 }
 
-header {
+header.top {
   margin: 2rem;
   display: grid;
   place-items: center;
 }
-header img {
+header.top img {
   width: clamp(15rem, 20vw, 325px);
 }
 
@@ -113,6 +113,7 @@ header img {
 #map {
   display: grid;
   place-items: center;
+  margin-bottom: 5vh;
 }
 #map .map {
   width: 100vw;
@@ -121,29 +122,73 @@ header img {
   height: 5em;
   background-color: rgb(201, 54, 70);
   color: white;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
-#map .bg {
+#map .map-wrapper {
+  position: relative;
+}
+#map .map-wrapper .bg {
   width: 80vw;
   z-index: -1;
 }
-
+#map .map-wrapper .map-point {
+  position: absolute;
+  width: 1vw;
+}
+#map .map-wrapper .map-point[data-modal-target="#kolh4"] {
+  top: 23vw;
+  left: 40.5vw;
+}
+#map .map-wrapper .map-point[data-modal-target="#kolh8"] {
+  top: 28vw;
+  left: 40.5vw;
+}
 .modal {
   position: fixed;
+  overflow: scroll;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   transition: all 0.3s ease-in-out;
   transform: scale(0);
+  padding: 10vw;
 }
-
 .modal.active {
   transition: all 0.3s ease-in-out;
   transform: scale(1);
-}/*# sourceMappingURL=style.css.map */
+}
+.modal h3 {
+  position: absolute;
+  left: 0;
+  color: white;
+  background-color: rgb(201, 54, 70);
+  padding-right: 5vw;
+  line-height: 5em;
+  text-align: right;
+}
+.modal img {
+  height: 70vh;
+  position: absolute;
+  top: 8vh;
+  left: 7vw;
+  z-index: -1;
+}
+.modal button {
+  position: absolute;
+  right: 10vw;
+  height: 5em;
+  line-height: 5em;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.modal article header {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal article header h2 {
+  text-align: right;
+}

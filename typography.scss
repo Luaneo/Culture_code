@@ -5,16 +5,19 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 h1 {
     font-size: clamp(2rem, 4vw, 4vw);
-    font-weight: 400;
 }
 
+h2 {
+    font-size: clamp(1.5rem, 2vw, 2vw);
+    font-weight: 300 !important;
+}
 
 h3,
 p {
-    font-weight: 400;
     font-size: clamp(.8rem, .8vw, .8vw);
 }

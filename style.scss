@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(typography.css);
+@import url(responsive.css);
+
+$accent-color: rgb(201, 54, 70);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Unbounded, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+header.top {
+    margin: 2rem;
+    display: grid;
+    place-items: center;
+
+    img {
+        width: clamp(15rem, 20vw, 325px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1vw);
+    }
+}
+
+.arrow-section {
+    display: grid;
+    place-items: center;
+    background-image: url(images/introduction.png);
+    // background-size: clamp(500px, 100%, 1894px), clamp(100px, 100%, 663px);
+    background-size: contain;
+    background-position: center;
+    height: 35vw;
+
+    a {
+        display: block;
+        position: relative;
+        bottom: 2vw;
+        animation: slide-top 1s ease-in-out infinite alternate;
+
+
+        img {
+            width: 4vw;
+        }
+    }
+}
+
+#about {
+    .about {
+        display: grid;
+        place-items: center;
+        height: 5em;
+        background-color: $accent-color;
+        color: white;
+    }
+
+    article {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        display: flex;
+
+        main {
+            margin-left: clamp(10vw, 15vw, 25vw);
+            margin-right: 8vw;
+
+            .zheldor {
+                display: flex;
+                width: fit-content;
+                margin-bottom: 1.5em;
+                padding: .7em;
+                border-radius: 2rem;
+                border: 2px solid black;
+
+                img {
+                    display: inline;
+                    height: 1.3em;
+                    margin-right: .5em;
+                }
+            }
+
+            h1 {
+                width: 7em;
+                margin-bottom: 2.5rem;
+            }
+
+            p {
+                width: 30vw;
+                line-height: 1.5em;
+                text-align: justify;
+                margin-bottom: 1em
+            }
+
+            button {
+                margin-top: 1em;
+                padding: 1em;
+                border: none;
+                border-radius: 2em;
+                background-color: $accent-color;
+                color: white;
+                font-size: clamp(.8rem, 1vw, 1vw);
+                cursor: pointer;
+            }
+        }
+
+        img.mural-aside {
+            width: 34vw;
+            height: 53vw;
+            ;
+        }
+    }
+}
+
+#map {
+    display: grid;
+    place-items: center;
+    margin-bottom: 5vh;
+
+    .map {
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        height: 5em;
+        background-color: $accent-color;
+        color: white;
+        margin-bottom: 5vh;
+    }
+
+    .map-wrapper {
+        position: relative;
+
+        .bg {
+            width: 80vw;
+            z-index: -1;
+        }
+
+        .map-point {
+            position: absolute;
+            width: 1vw;
+
+
+            &[data-modal-target="#kolh4"] {
+                top: 23vw;
+                left: 40.5vw;
+            }
+
+            &[data-modal-target="#kolh8"] {
+                top: 28vw;
+                left: 40.5vw;
+            }
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+
+            &[data-modal-target="#"] {}
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    transition: all .3s ease-in-out;
+    transform: scale(0);
+    padding: 10vw;
+
+    &.active {
+        transition: all .3s ease-in-out;
+        transform: scale(1);
+    }
+
+    h3 {
+        position: absolute;
+        left: 0;
+        color: white;
+        background-color: $accent-color;
+        padding-right: 5vw;
+        line-height: 5em;
+        text-align: right;
+    }
+
+    img {
+        height: 70vh;
+        position: absolute;
+        top: 8vh;
+        left: 7vw;
+        z-index: -1;
+    }
+
+    button {
+        position: absolute;
+        right: 10vw;
+        height: 5em;
+        line-height: 5em;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    article {
+
+        header {
+            width: fit-content;
+
+            h2 {
+                text-align: right;
+            }
+        }
+    }
+}

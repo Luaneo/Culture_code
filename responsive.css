@@ -17,4 +17,33 @@
   #about article img {
     display: none;
   }
-}/*# sourceMappingURL=responsive.css.map */
+  .modal h3 {
+    top: 0;
+  }
+  .modal button {
+    top: 0;
+  }
+}
+@media (orientation: landscape) {
+  .modal h3 {
+    top: 5vh;
+    width: 55vw;
+    height: 5em;
+    z-index: -2;
+  }
+  .modal img {
+    width: 30vw;
+    height: auto !important;
+    position: absolute;
+    top: 8vh;
+    left: 7vw;
+    z-index: -1;
+  }
+  .modal article {
+    position: absolute;
+    left: 43vw;
+  }
+  .modal button {
+    top: 5vh;
+  }
+}
