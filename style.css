@@ -113,7 +113,6 @@ header.top img {
 #map {
   display: grid;
   place-items: center;
-  margin-bottom: 5vh;
 }
 #map .map {
   width: 100vw;
@@ -133,16 +132,23 @@ header.top img {
 }
 #map .map-wrapper .map-point {
   position: absolute;
-  width: 1vw;
+  width: 1.5vw;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.66, 0.23, 0.09, 1.4);
+}
+#map .map-wrapper .map-point:hover {
+  filter: drop-shadow(3px 4px 2px rgb(201, 54, 70));
+  transform: translateY(-3px);
 }
 #map .map-wrapper .map-point[data-modal-target="#kolh4"] {
-  top: 23vw;
+  top: 22vw;
   left: 40.5vw;
 }
 #map .map-wrapper .map-point[data-modal-target="#kolh8"] {
   top: 28vw;
-  left: 40.5vw;
+  left: 40vw;
 }
+
 .modal {
   position: fixed;
   overflow: scroll;
@@ -165,14 +171,15 @@ header.top img {
   color: white;
   background-color: rgb(201, 54, 70);
   padding-right: 5vw;
-  line-height: 5em;
   text-align: right;
 }
-.modal img {
-  height: 70vh;
+.modal .img-main {
   position: absolute;
-  top: 8vh;
   left: 7vw;
+  z-index: -1;
+}
+.modal .img-aside {
+  position: absolute;
   z-index: -1;
 }
 .modal button {
@@ -181,8 +188,12 @@ header.top img {
   height: 5em;
   line-height: 5em;
   border: none;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
+  font-size: clamp(0.8rem, 0.8vw, 0.8vw);
+  height: clamp(3em, 10vh, 10vh);
+  line-height: clamp(3em, 10vh, 10vh);
+  font-weight: 500;
 }
 .modal article header {
   width: -webkit-fit-content;
@@ -191,4 +202,8 @@ header.top img {
 }
 .modal article header h2 {
   text-align: right;
+}
+.modal article p {
+  text-align: justify;
+  line-height: 1.5em;
 }

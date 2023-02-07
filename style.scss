@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url(typography.css);
 @import url(responsive.css);
 
@@ -47,7 +47,6 @@ header.top {
         bottom: 2vw;
         animation: slide-top 1s ease-in-out infinite alternate;
 
-
         img {
             width: 4vw;
         }
@@ -76,14 +75,14 @@ header.top {
                 display: flex;
                 width: fit-content;
                 margin-bottom: 1.5em;
-                padding: .7em;
+                padding: 0.7em;
                 border-radius: 2rem;
                 border: 2px solid black;
 
                 img {
                     display: inline;
                     height: 1.3em;
-                    margin-right: .5em;
+                    margin-right: 0.5em;
                 }
             }
 
@@ -96,7 +95,7 @@ header.top {
                 width: 30vw;
                 line-height: 1.5em;
                 text-align: justify;
-                margin-bottom: 1em
+                margin-bottom: 1em;
             }
 
             button {
@@ -106,7 +105,7 @@ header.top {
                 border-radius: 2em;
                 background-color: $accent-color;
                 color: white;
-                font-size: clamp(.8rem, 1vw, 1vw);
+                font-size: clamp(0.8rem, 1vw, 1vw);
                 cursor: pointer;
             }
         }
@@ -114,7 +113,6 @@ header.top {
         img.mural-aside {
             width: 34vw;
             height: 53vw;
-            ;
         }
     }
 }
@@ -122,7 +120,6 @@ header.top {
 #map {
     display: grid;
     place-items: center;
-    margin-bottom: 5vh;
 
     .map {
         width: 100vw;
@@ -144,94 +141,24 @@ header.top {
 
         .map-point {
             position: absolute;
-            width: 1vw;
+            width: 1.5vw;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(.66,.23,.09,1.4);
 
+            &:hover {
+                filter: drop-shadow(3px 4px 2px $accent-color);
+                transform: translateY(-3px);
+            }
 
             &[data-modal-target="#kolh4"] {
-                top: 23vw;
+                top: 22vw;
                 left: 40.5vw;
             }
 
             &[data-modal-target="#kolh8"] {
                 top: 28vw;
-                left: 40.5vw;
+                left: 40vw;
             }
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
-
-            &[data-modal-target="#"] {}
         }
     }
 }
@@ -244,12 +171,12 @@ header.top {
     right: 0;
     left: 0;
     background-color: white;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transform: scale(0);
     padding: 10vw;
 
     &.active {
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform: scale(1);
     }
 
@@ -259,15 +186,17 @@ header.top {
         color: white;
         background-color: $accent-color;
         padding-right: 5vw;
-        line-height: 5em;
         text-align: right;
     }
 
-    img {
-        height: 70vh;
+    .img-main {
         position: absolute;
-        top: 8vh;
         left: 7vw;
+        z-index: -1;
+    }
+
+    .img-aside {
+        position: absolute;
         z-index: -1;
     }
 
@@ -277,18 +206,26 @@ header.top {
         height: 5em;
         line-height: 5em;
         border: none;
-        background-color: white;
+        background-color: transparent;
         cursor: pointer;
+        font-size: clamp(.8rem, .8vw, .8vw);
+        height: clamp(3em, 10vh, 10vh);
+        line-height: clamp(3em, 10vh, 10vh);
+        font-weight: 500;
     }
 
     article {
-
         header {
             width: fit-content;
 
             h2 {
                 text-align: right;
             }
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.5em;
         }
     }
 }
