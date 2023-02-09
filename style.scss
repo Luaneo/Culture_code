@@ -10,6 +10,7 @@ $accent-color: rgb(201, 54, 70);
     font-family: Unbounded, sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+    color: black;
 }
 
 header.top {
@@ -159,6 +160,11 @@ header.top {
                 top: 28vw;
                 left: 40vw;
             }
+
+            &[data-modal-target="#lug2-mon"] {
+                top: 28vw;
+                left: 67vw;
+            }
         }
     }
 }
@@ -226,6 +232,7 @@ header.top {
         p {
             text-align: justify;
             line-height: 1.5em;
+            margin-bottom: 1.5em;
         }
     }
 }

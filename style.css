@@ -7,6 +7,7 @@
   font-family: Unbounded, sans-serif;
   text-decoration: none;
   scroll-behavior: smooth;
+  color: black;
 }
 
 header.top {
@@ -148,6 +149,10 @@ header.top img {
   top: 28vw;
   left: 40vw;
 }
+#map .map-wrapper .map-point[data-modal-target="#lug2-mon"] {
+  top: 28vw;
+  left: 67vw;
+}
 
 .modal {
   position: fixed;
@@ -206,4 +211,5 @@ header.top img {
 .modal article p {
   text-align: justify;
   line-height: 1.5em;
+  margin-bottom: 1.5em;
 }
