@@ -38,7 +38,7 @@ header.top {
     place-items: center;
     background-image: url(images/introduction.png);
     // background-size: clamp(500px, 100%, 1894px), clamp(100px, 100%, 663px);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     height: 35vw;
 
@@ -218,6 +218,11 @@ header.top {
         height: clamp(3em, 10vh, 10vh);
         line-height: clamp(3em, 10vh, 10vh);
         font-weight: 500;
+        transition: all 0.3s cubic-bezier(.66,.23,.09,1.4);
+
+        &:hover {
+            transform: translateY(-4px);
+        }
     }
 
     article {

@@ -41,6 +41,7 @@
     bottom: 0;
     right: 5vw;
     width: 13vw;
+    max-height: 80vh;
   }
   .modal article {
     position: absolute;
