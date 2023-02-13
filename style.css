@@ -31,7 +31,7 @@ header.top img {
   display: grid;
   place-items: center;
   background-image: url(images/introduction.png);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   height: 35vw;
 }
@@ -188,6 +188,10 @@ header.top img {
   height: clamp(3em, 10vh, 10vh);
   line-height: clamp(3em, 10vh, 10vh);
   font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.66, 0.23, 0.09, 1.4);
+}
+.modal button:hover {
+  transform: translateY(-4px);
 }
 .modal article header {
   width: -moz-fit-content;
