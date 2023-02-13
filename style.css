@@ -19,15 +19,6 @@ header.top img {
   width: clamp(15rem, 20vw, 325px);
 }
 
-@-webkit-keyframes slide-top {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-1vw);
-  }
-}
-
 @keyframes slide-top {
   0% {
     transform: translateY(0);
@@ -48,8 +39,7 @@ header.top img {
   display: block;
   position: relative;
   bottom: 2vw;
-  -webkit-animation: slide-top 1s ease-in-out infinite alternate;
-          animation: slide-top 1s ease-in-out infinite alternate;
+  animation: slide-top 1s ease-in-out infinite alternate;
 }
 .arrow-section a img {
   width: 4vw;
@@ -73,7 +63,6 @@ header.top img {
 }
 #about article main .zheldor {
   display: flex;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 1.5em;
@@ -201,7 +190,6 @@ header.top img {
   font-weight: 500;
 }
 .modal article header {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
