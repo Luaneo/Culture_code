@@ -142,6 +142,10 @@ header.top img {
   top: 28vw;
   left: 67vw;
 }
+#map .map-wrapper .map-point[data-modal-target="#pion31"] {
+  top: 29vw;
+  left: 64.5vw;
+}
 
 .modal {
   position: fixed;
