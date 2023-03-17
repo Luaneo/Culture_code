@@ -170,6 +170,16 @@ header.top {
                 top: 29vw;
                 left: 64.5vw;
             }
+            
+            &[data-modal-target="#pion29-hiv"] {
+                top: 33vw;
+                left: 63.5vw;
+            }
+
+            &[data-modal-target="#lug2-gor"] {
+                top: 32vw;
+                left: 66.6vw;
+            }
         }
     }
 }
