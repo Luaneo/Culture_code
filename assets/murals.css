@@ -1,0 +1,220 @@
+@import url(general.css);
+@import url(resp-murals.css);
+header.top {
+  margin: 2rem;
+  display: grid;
+  place-items: center;
+}
+header.top img {
+  width: clamp(15rem, 20vw, 325px);
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}
+.arrow-section {
+  display: grid;
+  place-items: center;
+  background-image: url(../images/Murals/introduction.png);
+  background-size: cover;
+  background-position: center;
+  height: 35vw;
+}
+.arrow-section a {
+  display: block;
+  position: relative;
+  bottom: 2vw;
+  animation: slide-top 1s ease-in-out infinite alternate;
+}
+.arrow-section a img {
+  width: 4vw;
+}
+
+#about .about {
+  display: grid;
+  place-items: center;
+  height: 5em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+}
+#about article {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+}
+#about article main {
+  margin-left: 15vw;
+  margin-right: 8vw;
+}
+#about article main .zheldor {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1.5em;
+  padding: 0.7em;
+  border-radius: 2rem;
+  border: 2px solid black;
+}
+#about article main .zheldor img {
+  display: inline;
+  height: 1.3em;
+  margin-right: 0.5em;
+}
+#about article main h1 {
+  width: 7em;
+  margin-bottom: 2.5rem;
+}
+#about article main p {
+  width: 30vw;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+#about article main button {
+  margin-top: 1em;
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+  font-size: clamp(0.8rem, 1vw, 1vw);
+  cursor: pointer;
+}
+#about article img.mural-aside {
+  width: 34vw;
+  height: 53vw;
+}
+
+#map {
+  display: grid;
+  place-items: center;
+}
+#map .map {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  height: 5em;
+  background-color: rgb(201, 54, 70);
+  color: white;
+  margin-bottom: 5vh;
+}
+#map .map-wrapper {
+  position: relative;
+}
+#map .map-wrapper .bg {
+  width: 80vw;
+  z-index: -1;
+}
+#map .map-wrapper .map-point {
+  position: absolute;
+  width: 1.5vw;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.66, 0.23, 0.09, 1.4);
+}
+#map .map-wrapper .map-point:hover {
+  filter: drop-shadow(3px 4px 2px rgb(201, 54, 70));
+  transform: translateY(-3px);
+}
+
+.modal {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  padding: 10vw;
+}
+.modal.active {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.modal h3 {
+  position: absolute;
+  left: 0;
+  color: white;
+  background-color: rgb(201, 54, 70);
+  padding-right: 5vw;
+  text-align: right;
+}
+.modal .img-main {
+  position: absolute;
+  left: 7vw;
+  z-index: -1;
+}
+.modal .img-aside {
+  position: absolute;
+  z-index: -1;
+}
+.modal button {
+  position: absolute;
+  right: 10vw;
+  height: 5em;
+  line-height: 5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 0.8vw, 0.8vw);
+  height: clamp(3em, 10vh, 10vh);
+  line-height: clamp(3em, 10vh, 10vh);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.66, 0.23, 0.09, 1.4);
+}
+.modal button:hover {
+  transform: translateY(-4px);
+}
+.modal article header {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal article header h2 {
+  text-align: right;
+}
+.modal article p {
+  text-align: justify;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+[data-modal-target="#kolh4"] {
+  top: 22vw;
+  left: 40.5vw;
+}
+
+[data-modal-target="#kolh8"] {
+  top: 28vw;
+  left: 40vw;
+}
+
+[data-modal-target="#lug2-mon"] {
+  top: 28vw;
+  left: 67vw;
+}
+
+[data-modal-target="#pion31"] {
+  top: 29vw;
+  left: 64.5vw;
+}
+
+[data-modal-target="#pion29-hiv"] {
+  top: 33vw;
+  left: 64vw;
+}
+
+[data-modal-target="#lug2-gor"] {
+  top: 32vw;
+  left: 66.6vw;
+}
+
+[data-modal-target="#pion29-run"] {
+  top: 33vw;
+  left: 62vw;
+}

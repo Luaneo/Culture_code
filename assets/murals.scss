@@ -1,16 +1,7 @@
-@import url(general.scss);
-@import url(resp-murals.scss);
+@import url(general.css);
+@import url(resp-murals.css);
 
 $accent-color: rgb(201, 54, 70);
-
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: Unbounded, sans-serif;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    color: black;
-}
 
 header.top {
     margin: 2rem;
@@ -35,7 +26,7 @@ header.top {
 .arrow-section {
     display: grid;
     place-items: center;
-    background-image: url(images/introduction.png);
+    background-image: url(../images/Murals/introduction.png);
     // background-size: clamp(500px, 100%, 1894px), clamp(100px, 100%, 663px);
     background-size: cover;
     background-position: center;
@@ -131,6 +122,8 @@ header.top {
         margin-bottom: 5vh;
     }
 
+    
+
     .map-wrapper {
         position: relative;
 
@@ -144,40 +137,11 @@ header.top {
             width: 1.5vw;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(.66,.23,.09,1.4);
+            transform: translateY(0px);
 
-            &:hover {
+            &:hover, &.active {
                 filter: drop-shadow(3px 4px 2px $accent-color);
                 transform: translateY(-3px);
-            }
-
-            &[data-modal-target="#kolh4"] {
-                top: 22vw;
-                left: 40.5vw;
-            }
-
-            &[data-modal-target="#kolh8"] {
-                top: 28vw;
-                left: 40vw;
-            }
-
-            &[data-modal-target="#lug2-mon"] {
-                top: 28vw;
-                left: 67vw;
-            }
-
-            &[data-modal-target="#pion31"] {
-                top: 29vw;
-                left: 64.5vw;
-            }
-            
-            &[data-modal-target="#pion29-hiv"] {
-                top: 33vw;
-                left: 63.5vw;
-            }
-
-            &[data-modal-target="#lug2-gor"] {
-                top: 32vw;
-                left: 66.6vw;
             }
         }
     }
@@ -254,4 +218,39 @@ header.top {
             margin-bottom: 1.5em;
         }
     }
+}
+
+[data-modal-target="#kolh4"] {
+    top: 22vw;
+    left: 40.5vw;
+}
+
+[data-modal-target="#kolh8"] {
+    top: 28vw;
+    left: 40vw;
+}
+
+[data-modal-target="#lug2-mon"] {
+    top: 28vw;
+    left: 67vw;
+}
+
+[data-modal-target="#pion31"] {
+    top: 29vw;
+    left: 64.5vw;
+}
+
+[data-modal-target="#pion29-hiv"] {
+    top: 33vw;
+    left: 64vw;
+}
+
+[data-modal-target="#lug2-gor"] {
+    top: 32vw;
+    left: 66.6vw;
+}
+
+[data-modal-target="#pion29-run"] {
+    top: 33vw;
+    left: 62vw;
 }

@@ -1,2 +1,51 @@
-@import url(general.scss);
+@import url(general.css);
 
+body {
+    display: grid;
+    place-items: center;
+    gap: 3vw
+}
+
+header {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    width: 70vw;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid black;
+    
+    img {
+        width: clamp(15rem, 20vw, 325px);
+    }
+}
+
+article {
+    width: 70vw;
+
+    h1 {
+        width: 51vw;
+        margin-bottom: 2vw;
+    }
+
+    p {
+        text-indent: 3vw;
+        line-height: 1.5em;
+    }
+}
+
+footer {
+    width: 70vw;
+    border-top: 2px solid black;
+    padding-top: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-shadow: 2px 2px blue;
+        }
+    }
+}
