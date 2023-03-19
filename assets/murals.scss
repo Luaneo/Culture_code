@@ -139,7 +139,7 @@ header.top {
             transition: all 0.3s cubic-bezier(.66,.23,.09,1.4);
             transform: translateY(0px);
 
-            &:hover, &.active {
+            &:hover {
                 filter: drop-shadow(3px 4px 2px $accent-color);
                 transform: translateY(-3px);
             }
