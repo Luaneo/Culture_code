@@ -1,4 +1,25 @@
-modals = {
+const modalsInsides = {
+    intro: `<h3>Большие вызовы</h3>
+    <article>
+        <header>
+            <h1>Заголовок 1</h1>
+            <h2>Заголовок 2</h2>
+        </header>
+        <p>
+            1 абзац
+        </p>
+        <p>
+            2 абзац
+        </p>
+        <p>
+            3 абзац
+        </p>
+    </article>
+    <img alt="Картинка слева" class="img-main">
+    <button class="close-button">
+        ЗАКРЫТЬ &times;
+    </button>
+    <img alt="Картинка справа" class="img-aside">`,
     kolh4: `<h3>ул. Колхозная 4</h3>
     <article>
         <header>
@@ -217,87 +238,128 @@ modals = {
         ЗАКРЫТЬ &times;
     </button>
     <img src="../images/Murals/pion29-run-aside.png" alt="ИЗОБРАЖЕНИЕ МУРАЛА НА КОЛХОЗНОЙ 4" class="img-aside" />`
-}
+};  // contains modals' innerHTML
+const modalsKeywords = [
+    {
+        modalId: 'kolh4',
+        author: 'мауро патта', muralName: 'чашки', address: 'ул. колхозная 4', keywords: 'мурал колхозная женщина сардиния флоренция супруга мария'
+    },
+    {
+        modalId: 'kolh8',
+        author: 'фарид руэда', muralName: 'русская женщина', address: 'ул. колхозная 8', keywords: 'мурал'
+    },
+    {
+        modalId: 'lug2_mon',
+        author: 'сергей юраков', muralName: 'доживем до понедельника', address: 'луговая 2/1', keywords: 'мурал'
+    },
+    {
+        modalId: 'pion31',
+        author: 'деян иванович', muralName: 'девочка на дереве', mural_id: 'pion31', address: 'ул. пионерская 31', keywords: 'мурал'
+    },
+    {
+        modalId: 'pion29_hiv',
+        author: 'саша купалян', muralName: 'вич', address: 'ул. пионерская 29', keywords: 'мурал'
+    },
+    {
+        modalId: 'lug2_gor',
+        author: 'илья робе', muralName: 'гора', address: 'ул. луговая 2', keywords: 'мурал'
+    },
+    {
+        modalId: 'pion29_run',
+        author: 'Филипп Думальченко', muralName: 'бесконечный бег', address: 'ул. пионерская 29', keywords: 'мурал'
+    }
+];  // an array of modalKeywords objects
 
-const openModalButton = document.querySelectorAll('.map-point')
+const openButton = document.querySelector('.open-intro');
+const mapPoints = document.querySelectorAll('.map-point');
 
-openModalButton.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
+openButton.addEventListener('click', () => {
+    const modal = document.querySelector(openButton.dataset.modalTarget);
+    openModal(modal);
+});
+mapPoints.forEach((point) => {
+    point.addEventListener('click', () => {
+        const modal = document.querySelector(point.dataset.modalTarget);
+        openModal(modal);
+    });
 });
 
 function openModal(modal) {
-    if (modal == null) return
-    modal.innerHTML = modals[modal.id.replace('-', '_')];
-    modal.classList.add('active');
-    const closeButton = document.querySelector('.close-button')
+    console.log('in openModal');
+    // if (modal == null) return;
+
+    modal.innerHTML = modalsInsides[modal.id];
+
+    const closeButton = document.querySelector('.close-button');
+    if (closeButton == null) return;
     closeButton.addEventListener('click', () => {
         closeModal(modal);
-    });
+    })
+
+    modal.classList.add('active');
+    console.log(modal);
 };
 
 function closeModal(modal) {
+    console.log('in closeModal');
     if (modal == null) return;
+
     modal.classList.remove('active');
     setTimeout(() => {
         modal.innerHTML = '';
     }, 600);
 };
 
-dataset = [
-    {author: 'мауро патта', mural_name: 'чашки', mural_id:'kolh4', address:'ул. колхозная 4', keywords: 'мурал колхозная женщина сардиния флоренция супруга мария'},
-    {author: 'фарид руэда', mural_name: 'русская женщина', mural_id: 'kolh8', address: 'ул. колхозная 8', keywords: 'мурал'},
-    {author: 'сергей юраков', mural_name: 'доживем до понедельника', mural_id: 'lug2-mon', address: 'луговая 2/1', keywords: 'мурал'},
-    {author: 'деян иванович', mural_name: 'девочка на дереве', mural_id: 'pion31', address: 'ул. пионерская 31', keywords: 'мурал'},
-    {author: 'саша купалян', mural_name: 'вич', mural_id: 'pion29-hiv', address: 'ул. пионерская 29', keywords: 'мурал'},
-    {author: 'илья робе', mural_name: 'гора', mural_id: 'lug2-gor', address: 'ул. луговая 2', keywords: 'мурал'},
-    {author: 'Филипп Думальченко', mural_name: 'бесконечный бег', mural_id: 'pion29-run', address: 'ул. пионерская 29', keywords: 'мурал'},
-    // {author, mural_name, mural_id, address, keywords},
-    // {author, mural_name, mural_id, address, keywords},
-    // {author, mural_name, mural_id, address, keywords}
-];
 
 const form = document.querySelector('form');
 const input = document.querySelector('#searchbar');
-const results = document.querySelector('#search-results');
+const results = document.querySelector('#search-results');  // ul of buttons
 
-form.addEventListener('submit', el => {
-    el.preventDefault();
+// search through modal keywords and display buttons
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
     const keyword = input.value.trim().toLowerCase();
-    console.log(keyword);
-    const filteredData = dataset.filter(item => 
-        item.author.toLowerCase().includes(keyword) || item.mural_name.toLowerCase().includes(keyword) || item.mural_id.toLowerCase().includes(keyword) || item.address.toLowerCase().includes(keyword) || item.keywords.includes(keyword)
-    );
-    console.log(filteredData);
-    displayResults(filteredData);
+    const filteredData = keywordFilter(modalsKeywords, keyword)
+    displayModalButtons(filteredData);
 });
 
-const displayResults = (data) => {
+// returns modalsKeywords filtered by keyword
+function keywordFilter(modalsKeywords, keyword) {
+    console.log('in keywordFilter');
+    const filteredModalsKeywords = [];
+    for (const modalKeywords of modalsKeywords) {
+        for (const key in modalKeywords) {
+            if (modalKeywords[key].includes(keyword))
+                filteredModalsKeywords.push(modalKeywords);
+        }
+    }
+    return filteredModalsKeywords;
+};
+
+// displays all buttons
+function displayModalButtons(filteredData) {
+    console.log('in displayModalButtons');
     results.innerHTML = '';
-    data.forEach(item => {
-        const button = document.createElement('button')
-        button.innerHTML = `${item.address}: "${item.mural_name}" - ${item.author}`
-        button.dataset.modalTarget = `#${item.mural_id}`
-        button.addEventListener('click', () => {
-            const modal = document.querySelector(button.dataset.modalTarget)
-            openModal(modal)
-        });
-        // button.addEventListener('mouseover', () => {
-        //     point = document.querySelector(`.map-point[data-modal-target="${button.dataset.modalTarget}`)
-        //     console.log(point);
-        //     point.classList.add('active');
-        //     console.log('mouseover');
-        // });
-        // button.addEventListener('mouseout', () => {
-        //     point = document.querySelector(`.map-point[data-modal-target="${button.dataset.modalTarget}`)
-        //     console.log(point);
-        //     point.classList.remove('active');
-        //     console.log('mouseout');
-        // });
-        const li = document.createElement('li')
-        li.appendChild(button)
-        results.appendChild(li)
-    });
+    filteredData.forEach(displayButton);
+};
+
+// adds a single button to results ul
+function displayButton(modalKeywords) {
+    console.log('in displayButton');
+    const button = document.createElement('button');
+    setButtonInnerHTML(button, modalKeywords);
+
+    const modalId = '#' + modalKeywords.modalId;
+    const modal = document.querySelector(modalId);
+    console.log(modal);
+    button.addEventListener('click', () => openModal(modal));
+
+    // button.addEventListener('mouseover' ...)
+    // button.addEventListeren('mouseout' ...)
+
+    results.appendChild(button);
+};
+
+function setButtonInnerHTML(button, modalKeywords) {
+    button.innerHTML = `${modalKeywords.address}: ${modalKeywords.muralName} - ${modalKeywords.author}`
 };

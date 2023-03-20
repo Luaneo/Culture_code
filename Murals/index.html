@@ -60,7 +60,10 @@
                     местонахождение арт-объектов, изучить фотогра-фии,
                     узнать подробнее о произведении и его творце.
                 </p>
-                <a href="#map"><button>Cмотреть на карте</button></a>
+                <div class="buttons">
+                    <a href="#map"><button>Cмотреть на карте</button></a>
+                    <button class="open-intro" data-modal-target="#intro">Подробнее</button>
+                </div>
             </main>
             <img src="../images/Murals/kolh4-main.png" alt="ИЗОБРАЖЕНИЕ МУРАЛА НА КОЛХОЗНОЙ 4" class="mural-aside" />
         </article>
@@ -69,32 +72,35 @@
         <a href="#map">
             <h3 class="map">карта муралов</h3>
         </a>
-        <form>
-            <label for="searchbar">Поиск:</label>
-            <input type="text" id="searchbar" name="search">
-            <button type="submit">Поиск</button>
-        </form>
-        <ul id="search-results">
-            <li>Здесь будут результаты поиска</li>
-        </ul>
+        <div class="searchbar">
+            <form>
+                <label for="searchbar">Поиск:</label>
+                <input type="text" id="searchbar" name="search">
+                <button type="submit">Поиск</button>
+            </form>
+            <ul id="search-results">
+                <li>Здесь будут результаты поиска</li>
+            </ul>
+        </div>
         <div class="map-wrapper">
             <img src="../images/Murals/map-background.jpg" alt="ИЗОБРАЖЕНИЕ КАРТЫ" class="bg" />
             <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh4" />
             <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh8" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2-mon" />
+            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_mon" />
             <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion31" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29-hiv" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2-gor" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29-run" />
+            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_hiv" />
+            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_gor" />
+            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_run" />
         </div>
     </div>
+    <div class="modal" id="intro"></div>
     <div class="modal" id="kolh4"></div>
     <div class="modal" id="kolh8"></div>
-    <div class="modal" id="lug2-mon"></div>
+    <div class="modal" id="lug2_mon"></div>
     <div class="modal" id="pion31"></div>
-    <div class="modal" id="pion29-hiv"></div>
-    <div class="modal" id="lug2-gor"></div>
-    <div class="modal" id="pion29-run"></div>
+    <div class="modal" id="pion29_hiv"></div>
+    <div class="modal" id="lug2_gor"></div>
+    <div class="modal" id="pion29_run"></div>
 </body>
 
 </html>
