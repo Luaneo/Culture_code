@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <img src="../images/Murals/down-arrow.png" alt="НАЗАД">
     <header class="top">
         <a href="#">
             <img src="../images/Murals/logo.jpg" alt="КУЛЬТУРНЫЙ КОД 2022" />
@@ -72,25 +73,26 @@
         <a href="#map">
             <h3 class="map">карта муралов</h3>
         </a>
-        <div class="searchbar">
-            <form>
-                <label for="searchbar">Поиск:</label>
-                <input type="text" id="searchbar" name="search">
-                <button type="submit">Поиск</button>
-            </form>
-            <ul id="search-results">
-                <li>Здесь будут результаты поиска</li>
-            </ul>
-        </div>
-        <div class="map-wrapper">
-            <img src="../images/Murals/map-background.jpg" alt="ИЗОБРАЖЕНИЕ КАРТЫ" class="bg" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh4" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh8" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_mon" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion31" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_hiv" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_gor" />
-            <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_run" />
+        <div class="else-wrapper">
+            <div class="searchbar">
+                <form>
+                    <input type="text" id="searchbar" name="search" placeholder="Поиск">
+                    <button type="submit">🔎</button>
+                </form>
+                <ul id="search-results">
+                    <li>Здесь будут результаты поиска</li>
+                </ul>
+            </div>
+            <div class="map-wrapper">
+                <img src="../images/Murals/map-background.jpg" alt="ИЗОБРАЖЕНИЕ КАРТЫ" class="bg" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh4" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#kolh8" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_mon" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion31" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_hiv" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#lug2_gor" />
+                <img src="../images/Murals/pinhead.png" alt="📌" class="map-point" data-modal-target="#pion29_run" />
+            </div>
         </div>
     </div>
     <div class="modal" id="intro"></div>

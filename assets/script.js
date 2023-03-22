@@ -358,6 +358,7 @@ function displayButton(modalKeywords) {
     // button.addEventListeren('mouseout' ...)
 
     results.appendChild(button);
+    button.style = 'background-color: white; border: 2px solid black; line-height: 1.5em; border-radius: 2em; padding: 1em; width: 20vw; margin-bottom: 1em; cursor: pointer;';
 };
 
 function setButtonInnerHTML(button, modalKeywords) {

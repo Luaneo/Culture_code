@@ -121,7 +121,8 @@ header.top {
 
 #map {
     display: grid;
-    place-items: center;
+    justify-items: center;
+    margin-bottom: 5vw;
 
     .map {
         width: 100vw;
@@ -133,8 +134,25 @@ header.top {
         margin-bottom: 5vh;
     }
 
+    .else-wrapper {
+        display: flex;
+        width: 80vw;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
     .searchbar {
         width: 20vw;
+
+        form {
+            width: 20vw;
+            margin-bottom: 20px;
+        }
+
+        .search-results {
+            width: clamp(20em, 20vw, 20vw);
+            list-style-type: none;
+        }
     }
 
     .map-wrapper {
@@ -148,7 +166,7 @@ header.top {
 
         .map-point {
             position: absolute;
-            width: 1.5vw;
+            width: 1vw;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(.66, .23, .09, 1.4);
 
@@ -235,36 +253,36 @@ header.top {
 }
 
 [data-modal-target="#kolh4"] {
-    top: 22vw;
-    left: 40.5vw;
+    top: 53%;
+    left: 50%;
 }
 
 [data-modal-target="#kolh8"] {
-    top: 28vw;
-    left: 40vw;
+    top: 43%;
+    left: 50%;
 }
 
 [data-modal-target="#lug2_mon"] {
-    top: 28vw;
-    left: 67vw;
+    top: 28%;
+    left: 67%;
 }
 
 [data-modal-target="#pion31"] {
-    top: 29vw;
-    left: 64.5vw;
+    top: 29%;
+    left: 64.5%;
 }
 
 [data-modal-target="#pion29_hiv"] {
-    top: 33vw;
-    left: 64vw;
+    top: 33%;
+    left: 64%;
 }
 
 [data-modal-target="#lug2_gor"] {
-    top: 32vw;
-    left: 66.6vw;
+    top: 32%;
+    left: 66.6%;
 }
 
 [data-modal-target="#pion29_run"] {
-    top: 33vw;
-    left: 62vw;
+    top: 33%;
+    left: 62%;
 }
